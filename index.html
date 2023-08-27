@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sono', sans-serif;
+      background-color: rgb(91, 182, 152);
+    }
+    button{
+      background-color:rgb(35, 132, 64);
+      color: black;
+      font-weight: bold;
+      border-radius: 20px;
+    }
+    .pricing-container{
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height:100vh;
+      gap: 20px;
+    }
+    .pricing-plan{
+      background-color: rgb(51, 124, 97);
+      margin:10px;
+      border-radius: 10px;
+      text-align:center;
+      padding:20px;
+      flex:1;
+      height:200px;
+      max-width:300px;
+      box-shadow: 10px 10px 5px rgb(34, 94, 72);
+      text-shadow: 2px 2px 4px rgb(91, 182, 152);
+    }
+    hr{
+      height:2px;
+      border:0px;
+      background-color:rgb(91, 182, 152);
+    }
+    .plan-title{
+      font-size: 2rem;
+      font-weight: bolder;
+    }
+    .plan-features{
+      font-weight: bold;
+    }
+
+    /* Hint: What can you do with a media query and flexbox? */
+    @media (max-width: 760px) {
+      .pricing-container{
+        flex-direction:column;
+        height:100%;
+      }
+      .pricing-plan{
+        flex:1;
+        width:200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">$9.99/month</div>
+      <hr/>
+      <p class="plan-features">
+        ✓ listens <br />
+        ✓ supports a little<br />
+         x no hugs<br />
+      </p>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price">$19.99/month</div>
+      <hr />
+      <p class="plan-features">
+         ✓ listens and talks <br />
+         ✓ supports <br />
+         ✓ one hug <br/>
+      </p>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price">$49.99/month</div>
+      <hr />
+      <p class="plan-features">
+        ✓ listens and gives advice<br />
+        ✓ supports a lot <br />
+        ✓ lots of hugs<br />
+      </p>
+      <button class="plan-button">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
